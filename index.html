@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mi primera página</title>
+
+    <!-- CSS Stylesheet -->
+    <style>
+        body {
+            background: #458b74 url('http://www.twitrcovers.com/wp-content/uploads/2013/04/Minimalism-l.jpg') center center no-repeat;
+            background-size: cover;
+            color: #ffffff;
+        }
+
+        table,
+        tr,
+        td {
+            border: 2px solid #000;
+            font-size: 25px;
+        }
+
+        thead {
+            background-color: #fff;
+            color: #000;
+        }
+
+        table#maestros thead {
+            background-color: #DCAF11;
+            color: #fff;
+        }
+
+        table#maestros tbody {
+            background-color: #7eced5;
+            color: #000;
+        }
+
+        table#escuela thead {
+            background-color: #406b6f;
+            color: #DCAF11;
+        }
+
+
+
+        /* table.teachers tbody {
+            background-color: #7eced5;
+            color: #000;
+        }*/
+
+        .imagen {
+            border: 5px solid #000;
+            width: 400px;
+            height: auto;
+            display: block;
+            clear: both;
+        }
+
+        #primera {}
+
+        #segunda {
+            border: 5px solid #fff;
+        }
+
+        ul li,
+        ol li {
+            font-size: 25px;
+        }
+
+        ul li,
+        ol li ul li {
+            color: #DCAF11;
+        }
+
+        ol li,
+        ul li ol li {
+            color: #7eced5;
+        }
+    </style>
+    <!-- termina CSS Stylesheet -->
+
+</head>
+
+<body>
+    <!-- 
+       
+        https://tinyurl.com/ClaseHTML
+
+       ::: GUÍA DE CÓDIGO HTML ::: 
+       h1 -> título mayor
+       h2 -> subtítulo 
+       h3 -> título menor
+       h4 -> subtítulo menor
+       h5 -> título inferior
+
+       p -> párrafo
+    -->
+    <h1>Mi primera página Web</h1>
+    <h2>Clase de programación</h2>
+    <h3>Héctor Guedea</h3>
+    <p>Esta es mi primera página Web sobre la Clase de Programación.</p>
+
+    <p>
+        Para hacer búsqueda en Internet se usa la herramienta
+        <a href="http://www.google.com" title=" Enlace a la página de Google">Google</a>
+    </p>
+    <p>
+        <a href="http://www.secundariatalentoscolima.net" title="Los Talentosos" target="_blank">Escuela Talentos</a>
+    </p>
+
+    <img src="img/hg.jpg" alt="Foto de perfil" class="imagen" id="primera" />
+    <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/1160x650/public/media/image/2018/08/fotos-perfil-whatsapp_16.jpg?itok=0b5SU9Z9"
+        class="imagen" id="segunda" />
+
+    <!-- table es contenedor, es la declaración de tabla-->
+    <table>
+        <thead>
+            <tr>
+                <!-- TR es una fila -->
+                <td>Nombre</td>
+                <td>Grado</td>
+                <td>Grupo</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Héctor Guedea </td>
+                <td>3</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>Pancho Villa </td>
+                <td>1</td>
+                <td>B</td>
+            </tr>
+            <tr>
+                <td>Pepe El Toro </td>
+                <td>2</td>
+                <td>C</td>
+            </tr>
+            <tr>
+                <td>AMLO </td>
+                <td>3</td>
+                <td>B</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+    <table id="maestros" class="teachers">
+        <thead>
+            <tr>
+                <!-- TR es una fila -->
+                <td>ID</td>
+                <td>Nombre</td>
+                <td>Enseña</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>03031986 </td>
+                <td>Héctor Guedea</td>
+                <td>Programación Web</td>
+            </tr>
+            <tr>
+                <td>03031986 </td>
+                <td>Héctor Guedea</td>
+                <td>Programación Web</td>
+            </tr>
+            <tr>
+                <td>03031986 </td>
+                <td>Héctor Guedea</td>
+                <td>Programación Web</td>
+            </tr>
+            <tr>
+                <td>03031986 </td>
+                <td>Héctor Guedea</td>
+                <td>Programación Web</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <table id="escuela">
+        <thead>
+            <tr>
+                <!-- TR es una fila -->
+                <td>ID</td>
+                <td>Escuela</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>123456 </td>
+                <td>Escuela de Talentos</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <ul>
+        <li>Uno
+            <ol>
+                <li>Uno 1.0</li>
+                <li>Uno 2.0</li>
+                <li>Uno 3.0</li>
+            </ol>
+        </li>
+        <li>Dos</li>
+        <li>Tres</li>
+        <li>Cuatro</li>
+    </ul>
+
+    <ol>
+        <li>Uno
+            <ul>
+                <li>Uno 1.0</li>
+                <li>Uno 2.0</li>
+            </ul>
+        </li>
+        <li>Dos</li>
+        <li>Tres</li>
+        <li>Cuatro</li>
+    </ol>
+
+    <h2>Vídeo de Pantera, los mejores riffs</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/lbgKsIBpuds" frameborder="0" allow="autoplay; encrypted-media"
+        allowfullscreen></iframe>
+
+    <!-- Crear vídeo -->
+
+    <video width="560" heigth="315" controls>
+        <source src="video/mariana.mp4" type="video/mp4">
+    </video>
+
+</body>
+
+</html>
