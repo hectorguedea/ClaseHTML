@@ -4,6 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Mi primera página</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var color = 888;
+            $('img').on('click', function () {
+                $(this).css('border-color', '#' + color);
+                color = color + 1
+            });
+        });
+
+    </script>
 
     <!-- CSS Stylesheet -->
     <style>
@@ -53,6 +64,7 @@
             height: auto;
             display: block;
             clear: both;
+            cursor:pointer;
         }
 
         #primera {}
