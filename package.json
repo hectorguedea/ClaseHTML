@@ -8,7 +8,9 @@
     "jsdom": "^12.2.0",
     "sass": "^1.14.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^5.7.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
