@@ -3,4 +3,16 @@ body {
   background-color: #fff;
 }
 
+h1 {
+  color: #fff;
+}
+
+#descripcion {
+  color: #fff;
+}
+
+#section {
+  background-color: #000;
+}
+
 /*# sourceMappingURL=style.css.map */
