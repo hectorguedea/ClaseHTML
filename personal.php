@@ -134,6 +134,11 @@
             width:300px;
             height:100px;
         }
+        @media (max-width:768px){
+           #contacto form textarea{
+            width:200px;  
+          }  
+        }
         #contacto form input[type=submit]{
             cursor:pointer;
             padding:10px;
@@ -195,17 +200,7 @@
                 in requirements
                 and innovations in programming languages.</p>
 
-            <?php
-            //Declaración de variables
-            $nombre ='Héctor Guedea';
-            $edad = 40;
-            $club = "Club de Hacking";
-            $donde = "Talentos";
             
-            echo '<p>';
-            echo 'El maestro '.$nombre.' tiene '.$edad.' e imparte el '.$club.' en '.$donde.'.'; 
-            echo '</p>';
-            ?>
             <p><strong>Keywords:</strong> <a href="https://www.google.com/search?source=hp&ei=vQXSW7bRM4fMwQL5qqiABw&q=web+development+&oq=web+development+&gs_l=psy-ab.3...2600.5452.0.5703.12.9.0.0.0.0.310.802.2-2j1.3.0....0...1c.1.64.psy-ab..10.2.519.0..0j35i39k1j0i131k1.0.5x6BtbAAb24"
                     title="Buscar en Google Web Development">web development</a>, <a href="https://www.google.com/search?ei=xQXSW4PYE4nUwQLnwqywBA&q=frontend+development&oq=frontend+development&gs_l=psy-ab.3..35i39k1j0l2j0i10k1j0j0i203k1j0i10i203k1j0i203k1l2j0i10i203k1.273358.280485.0.280636.30.24.4.0.0.0.493.3076.0j1j2j4j2.9.0....0...1c.1.64.psy-ab..20.10.2143...0i67k1j0i131k1.0.90Y7hCoJmT8"
                     title="Frontend">frontend</a>, <a href="https://www.google.com/search?ei=3gbSW4PaM4fWkwXhwKTYCw&q=backend+development&oq=backend+development&gs_l=psy-ab.3..0i7i30k1l10.27801.28640.0.28830.7.7.0.0.0.0.236.236.2-1.1.0....0...1c.1.64.psy-ab..6.1.235....0.7BldP3cZL6Q"
@@ -217,12 +212,23 @@
             </p>
 
             <div class="lenguajes">
-                <img src="https://image.flaticon.com/icons/png/512/490/490273.png" title="Algoritmos" />
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/230px-HTML5_logo_and_wordmark.svg.png"
-                    title="HTML" />
-                <img src="https://lenguajecss.com/img/css3-logo.png" title="CSS" />
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png"
-                    title="PHP" />
+
+             <?php 
+
+             $images = ['Algoritmos'=>'https://image.flaticon.com/icons/png/512/490/490273.png',
+             'HTML5' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/230px-HTML5_logo_and_wordmark.svg.png',
+             'CSS'=>'https://lenguajecss.com/img/css3-logo.png',
+             'PHP' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png',
+             'jQuery'=>'http://lineadecodigo.com/wp-content/uploads/2014/04/jquery-e1431944403253.png',
+             'Git'=>'http://ser-libre.com.ar/wp-content/uploads/2016/10/git-logo.png']; 
+
+             foreach($images as $nombre => $url) {
+               echo '<img src='.$url.' title='.$nombre.'>';
+            }
+
+
+            
+             ?>
             </div>
 
         </section>
@@ -236,7 +242,6 @@
                 <textarea name="mensaje" placeholder="Agrega tu mensaje" required></textarea>
                 <input type="submit" value="Enviar mensaje">
             </form>
-
         </section>
 
 
