@@ -162,6 +162,23 @@
              margin-top:3px;
             /* margin:3px 0;*/
          }
+         .mensaje{
+                 padding: 15px;
+                 margin-bottom: 20px;
+                 border: 1px solid transparent;
+                 border-radius: 4px;
+                 margin-top:15px;
+         }
+         .success{
+             color: #3c763d;
+             background-color: #dff0d8;
+             border-color: #d6e9c6;
+             }
+        .error{
+             color: #a94442;
+             background-color: #f2dede;
+             border-color: #ebccd1;
+        }
        
     </style>
 </head>
@@ -221,7 +238,7 @@
              'PHP' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png',
              'jQuery'=>'http://lineadecodigo.com/wp-content/uploads/2014/04/jquery-e1431944403253.png',
              'Git'=>'http://ser-libre.com.ar/wp-content/uploads/2016/10/git-logo.png']; 
-
+              
              foreach($images as $nombre => $url) {
                echo '<img src='.$url.' title='.$nombre.'>';
             }
@@ -235,13 +252,28 @@
         <section id="contacto">
             <h1>¡Ponte en contacto conmigo!</h1>
             <p>Estoy abierto a oportunidades laborales como <strong>software engineer</strong>.</p>
-            <form method="POST" action="personal.html">
+            <form method="POST" action="personal.php#contacto">
                 <input type="text" placeholder="Agrega tu nombre" name="nombre" required>
                 <input type="text" placeholder="Agrega el asunto" name="asunto" required>
                 <input type="email" placeholder="Agrega tu email" name="email" required>
                 <textarea name="mensaje" placeholder="Agrega tu mensaje" required></textarea>
                 <input type="submit" value="Enviar mensaje">
             </form>
+            <?php 
+             if($_POST)
+             {
+              $to = "hectorguedea@gmail.com";
+              $headers = "From: me@hectorguedea.com \r\n Reply-to:".$_POST['email']." ";
+              $message="".$_POST["nombre"]." escribió: ".$_POST['mensaje']." ";
+              $result = mail($to, $_POST['asunto'],$message, $headers);
+              if(!$result){
+                echo '<div class="mensaje error">Hubo un error en enviar el correo electrónico, vuelva a intentarlo</div>';
+              }else{
+                echo '<div class="mensaje success">Mensaje enviado con éxito, pronto me pondré en contacto contigo.</div>';
+              }
+
+             }
+            ?>
         </section>
 
 
