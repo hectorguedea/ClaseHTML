@@ -20,7 +20,7 @@ for (i = 0; i < valores.length; i++) {
   GuardarDatoAdicional(1, valores[i].innerHTML, 1);
 }
 
-x = 0;
+let x = 0;
 for (i = 0; i < tDisponibilidad.length; i++) {
   if (tDisponibilidad[i].xProducto == "UNIDAD CENTRAL DE PROCESO") {
     x++;
